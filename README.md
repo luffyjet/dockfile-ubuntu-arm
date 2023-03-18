@@ -7,7 +7,7 @@ build 一个 arm64版 ubuntu focal，用来导出 ubuntu20-arm64-sysroot，
 ## build 
 
 ````
-   docker buildx build --platform linux/arm64 -t  ubuntu-focal-arm64:v1 . --load
+   docker buildx build --platform linux/arm64 -t  luffyjet2023/ubuntu-focal-arm64:v1 . --load
 
 ````
 

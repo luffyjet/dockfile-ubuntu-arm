@@ -9,7 +9,8 @@ ADD sources.list /etc/apt/
 ENV SHELL=/bin/bash
 
 # 安装flutter-elinux相关开发工具
-RUN env DEBIAN_FRONTEND=noninteractive apt-get install -y \
+RUN apt-get update && \
+    env DEBIAN_FRONTEND=noninteractive apt-get install -y \
       clang cmake build-essential \
       libegl1-mesa libgles2-mesa libxkbcommon-dev\
       pkg-config libegl1-mesa-dev  libgles2-mesa-dev \
@@ -33,4 +34,4 @@ RUN echo $LANG UTF-8 > /etc/locale.gen && \
      locales && \
     update-locale --reset LANG=$LANG 
 
-CMD ["ubuntu-session"]
+CMD ["bash"]
